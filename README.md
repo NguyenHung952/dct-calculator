@@ -1,31 +1,38 @@
-# Tính toán DCT
+# 🧮 Tính toán DCT
 
-Ứng dụng minh họa tính toán **Discrete Cosine Transform (DCT)** trên nền web, kết hợp giao diện HTML/CSS/JavaScript với xử lý Python.
+> Ứng dụng minh họa **Discrete Cosine Transform (DCT)** kết hợp frontend web và xử lý Python.
 
-## Cấu trúc
+## ✨ Tổng quan
+
+Project dùng giao diện web để nhập dữ liệu và quan sát quá trình/kết quả tính toán DCT theo logic đang có.
+
+## 🧱 Cấu trúc
 
 ```text
- tinh-toan-dct/
- ├── app.py
- ├── index.html
- ├── script.js
- ├── style.css
- └── README.md
+tinh-toan-dct/
+├── app.py          # Xử lý Python / backend hiện có
+├── index.html      # Giao diện
+├── script.js       # Logic phía client
+├── style.css       # UI
+└── README.md
 ```
 
-## Thành phần
+## 🚀 Chạy
 
-- `app.py`: phần xử lý Python.
-- `index.html`: giao diện ứng dụng.
-- `script.js`: xử lý tương tác và tính toán phía trình duyệt.
-- `style.css`: giao diện.
+Project có thành phần Python nên hãy dùng môi trường Python phù hợp với `app.py`. Phần frontend có thể được mở bằng static web server theo cách triển khai hiện tại.
 
-## Mục đích
+## 🛠️ Công nghệ
 
-Dùng để học tập, minh họa và thử nghiệm các phép tính liên quan đến DCT.
+`Python` · `HTML5` · `CSS3` · `JavaScript`
 
-## Chạy ứng dụng
+## 🎓 Mục đích
 
-Tùy cách triển khai hiện tại, có thể chạy phần Python bằng môi trường Python hoặc mở trực tiếp giao diện web khi các thành phần frontend hoạt động độc lập.
+Phục vụ học tập **xử lý tín hiệu số / xử lý ảnh**, đặc biệt là cách DCT biến đổi dữ liệu và hỗ trợ các bài toán nén, phân tích tín hiệu.
 
-> Lưu ý: mã nguồn hiện có được giữ nguyên; README chỉ được chuẩn hóa để mô tả repository rõ ràng hơn.
+## 📌 Trạng thái
+
+**DSP Learning Tool** — chỉ cập nhật tài liệu repository; không thay đổi mã nguồn tính toán.
+
+---
+
+**Nguyễn Ngọc Hùng · IUH**
