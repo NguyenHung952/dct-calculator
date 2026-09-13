@@ -1,25 +1,63 @@
 <!DOCTYPE html>
- <html lang="vi">
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Máy tính Biến đổi Cosine Rời rạc (DCT)</title>
-     <link rel="stylesheet" href="style.css">
- </head>
- <body>
-     <div class="container">
-         <h2>Máy tính Biến đổi Cosine Rời rạc (DCT)</h2>
-         <label for="matrixRows">Số hàng:</label>
-         <input type="number" id="matrixRows" min="1" max="10" value="4">
-         <label for="matrixCols">Số cột:</label>
-         <input type="number" id="matrixCols" min="1" max="10" value="4">
-         <button id="generateMatrix">Tạo ma trận</button>
-         <div id="matrixInput"></div>
-         <button id="computeDCT1D" style="display:none;">Tính DCT 1D</button>
-         <button id="computeDCT2D" style="display:none;">Tính DCT 2D</button>
-         <h3>Kết quả:</h3>
-         <div id="matrixResult"></div>
-     </div>
-     <script src="script.js"></script>
- </body>
- </html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB → YUV → DCT 8×8 → Quantization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>RGB → YUV → DCT 8×8 → Quantization</h2>
+        <p class="subtitle">Mô phỏng chuỗi xử lý theo tài liệu môn học</p>
+
+        <section class="pipeline-section">
+            <h3>1. RGB → YUV → DCT 8×8 → Quantization</h3>
+            <p>
+                Nhập một khối ảnh RGB 8×8. Hệ thống sẽ tính Y, U, V;
+                sau đó DCT 2D từng thành phần và lượng tử hóa bằng ma trận trọng số.
+            </p>
+
+            <div class="controls">
+                <label for="quantStep">Bước lượng tử Q:</label>
+                <input type="number" id="quantStep" min="0.000001" step="any" value="8">
+                <button id="runPipeline">Chạy toàn bộ pipeline</button>
+            </div>
+
+            <div class="rgb-inputs">
+                <div>
+                    <h4>R</h4>
+                    <div id="rInput"></div>
+                </div>
+                <div>
+                    <h4>G</h4>
+                    <div id="gInput"></div>
+                </div>
+                <div>
+                    <h4>B</h4>
+                    <div id="bInput"></div>
+                </div>
+            </div>
+
+            <div id="pipelineResult"></div>
+        </section>
+
+        <hr>
+
+        <section class="legacy-section">
+            <h3>2. Máy tính DCT tổng quát</h3>
+            <label for="matrixRows">Số hàng:</label>
+            <input type="number" id="matrixRows" min="1" max="10" value="4">
+            <label for="matrixCols">Số cột:</label>
+            <input type="number" id="matrixCols" min="1" max="10" value="4">
+            <button id="generateMatrix">Tạo ma trận</button>
+            <div id="matrixInput"></div>
+            <button id="computeDCT1D" style="display:none;">Tính DCT 1D</button>
+            <button id="computeDCT2D" style="display:none;">Tính DCT 2D</button>
+            <h3>Kết quả:</h3>
+            <div id="matrixResult"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
